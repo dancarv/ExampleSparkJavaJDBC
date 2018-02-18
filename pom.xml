@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>hortonworks</groupId>
+	<artifactId>SparkTutorial</artifactId>
+	<version>1.0</version>
+	<repositories>
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>hortonworks.extrepo</id>
+			<name>Hortonworks HDP</name>
+			<url>http://repo.hortonworks.com/content/repositories/releases</url>
+		</repository>
+
+		<repository>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>hortonworks.other</id>
+			<name>Hortonworks Other Dependencies</name>
+			<url>http://repo.hortonworks.com/content/groups/public</url>
+		</repository>
+	</repositories>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+			<!-- plugin> <artifactId>maven-assembly-plugin</artifactId> <executions> 
+				<execution> <phase>package</phase> <goals> <goal>single</goal> </goals> </execution> 
+				</executions> <configuration> <finalName>SparkReadHBase</finalName> <appendAssemblyId>false</appendAssemblyId> 
+				<descriptorRefs> <descriptorRef>jar-with-dependencies</descriptorRef> </descriptorRefs> 
+				</configuration> </plugin -->
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-core_2.11</artifactId>
+			<version>2.2.0.2.6.4.5-1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-sql_2.11</artifactId>
+			<version>2.2.0.2.6.4.5-1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.spark</groupId>
+			<artifactId>spark-hive_2.11</artifactId>
+			<version>2.2.0.2.6.4.5-1</version>
+		</dependency>
+
+
+		<!-- dependency> <groupId>org.apache.hbase</groupId> <artifactId>hbase-client</artifactId> 
+			<version>1.1.2.2.6.3.11-1</version> </dependency> <dependency> <groupId>org.apache.spark</groupId> 
+			<artifactId>spark-core_2.11</artifactId> <version>2.2.0.2.6.3.11-1</version> 
+			</dependency> <dependency> <groupId>com.microsoft.sqlserver</groupId> <artifactId>mssql-jdbc</artifactId> 
+			<version>6.3.6.jre8-preview</version> <scope>test</scope> </dependency> <dependency> 
+			<groupId>org.apache.zookeeper</groupId> <artifactId>zookeeper</artifactId> 
+			<version>3.4.6.2.5.0.83-2</version> </dependency> <dependency> <groupId>org.apache.spark</groupId> 
+			<artifactId>spark-hive_2.11</artifactId> <version>2.2.0.2.6.3.11-1</version> 
+			</dependency> <dependency> <groupId>org.apache.hadoop</groupId> <artifactId>hadoop-core</artifactId> 
+			<version>1.2.1</version> </dependency> <dependency> <groupId>org.apache.hadoop</groupId> 
+			<artifactId>hadoop-common</artifactId> <version>2.7.3.2.5.0.82-1</version> 
+			<scope>provided</scope> </dependency> <dependency> <groupId>jdk.tools</groupId> 
+			<artifactId>jdk.tools</artifactId> <version>1.7</version> </dependency> <dependency> 
+			<groupId>org.scala-lang</groupId> <artifactId>scala-library</artifactId> 
+			<version>2.11.11</version> </dependency -->
+
+
+
+	</dependencies>
+
+
+</project>
